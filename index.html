@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple app</title>
+
+    </head>
+    <body>
+        
+
+        <div  ng-app="myList">
+             <div ng-controller="MyController"> 
+                <input ng-model="area" type="text" placeholder="Area">
+                <input ng-model="activity" type="text" placeholder="Activity">
+
+                <button ng-click="submit()"> Click here</button>
+                <h3> Things to do: </h3>
+
+                <ul>
+                <li ng-repeat="item in toDoList | orderBy: 'area'" > {{item.area}} - {{item.activity}}</li> 
+                </ul> 
+           </div> 
+        </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script> 
+      <script type ="text/javascript" src ="app.js"></script> 
+     </body>
+</html> 
+
+
